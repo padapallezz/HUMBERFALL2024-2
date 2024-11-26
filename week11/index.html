@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #student{
+            width: 100%;
+          
+        }
+        #student td, #student th {
+            border: 1px solid green;
+            padding: 8px;
+
+        }
+        #student tr:nth-child(even){
+         background-color: aqua;
+        }
+        #student tr:hover{
+            background-color: lightblue;
+        }
+        #item{
+            grid-column:1/span 2;
+        }
+    </style>
+</head>
+<body>
+    <form action=" join.html" method ="get">
+        <input type ="text" id="email" name="email_1">
+        <input type="submit" id="join_list" 
+            value="Join list">
+    </form>
+    <script>
+        const $= selector => document.querySelector(selector);
+
+        const joinList=evt => {
+            if($.("#email").value="") {
+                alert("Please enter your email!");
+                evt.preventDefault();
+            }
+        } 
+      
+
+    </script>
+    <div class="grid-container">
+        <div id="item1">1</div>
+        <div >2</div>
+     
+    </div>
+    <table id="student">
+        <tr><td><b>Name</b></td><td><b>Address</b></td><td><b>ID</b></td></tr>
+        <tr><td>Bernice</td><td>Mississauga</td><td>20899985</td></tr>
+        <tr><td>Dana</td><td>Mississauga</td><td>22004849</td></tr>
+        <tr><td>Andrew</td><td>Toronto</td><td>22003975</td></tr>
+        <tr><td>Rain</td><td>Etobicoke</td><td>21893973</td></tr>
+        <tr><td>Sunny</td><td>Brampton</td><td>22004080</td></tr>
+    </table>
+    
+</body>
+</html>
